@@ -1,0 +1,31 @@
+<form action="/book" method="post">
+<input type="text" name="name" placeholder="Name">
+<input type="email" name="email" placeholder="email">
+<input type="number" name="age" placeholder="age">
+<button type="submit">Submit</button>
+</form>
+
+
+
+<h1>Storing Data</h1>
+
+<div class="grid">
+{{#each Booking}}
+<table>
+  <tr>
+    <th>Name</th>
+    <th>email</th>
+    <th>Age</th>
+  </tr>
+  <hr>
+  <tr>
+    <td>{{name}}</td>
+    <td>{{email}}</td>
+    <td>{{age}}</td>
+    <td><a href="/cancel/{{id}}"
+    style="padding: 7px 40px;background:red;border-radius:5px;color:#fff;text-decoration:none"
+    >Cancel</></td>
+  </tr>
+</table>
+{{/each}}
+</div>
